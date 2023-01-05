@@ -1,0 +1,168 @@
+/*  Crie uma classe Gato, com os atributos string nome, peso, raça, com os seguintes métodos:    
+método miar, que imprime:  *nome*  disse: MIAAAAAUU.
+método andar, que imprime: *nome* está andando.
+método ronronar, que imprime: “nome* está ronronando.
+método infoGato, que imprime os valores dos atributos nome, peso, raça.
+Realize testes na classe criada, através dos objetos.  */
+
+public class Gato {
+	String nome;
+    String peso;
+    String raca;
+    
+    public void nNome(String nNome){
+        nome = nNome;
+    }
+    public void nPeso(String nPeso){
+        peso = nPeso;
+    }
+    public void nRaca(String nRaca){
+        raca = nRaca;
+    }
+    public void miar(){
+        System.debug(nome+' esta miando');
+    }
+    public void andar(){
+        System.debug(nome+' esta andando');
+    }
+    public void ronronar(){
+        System.debug(nome+' esta ronronando');
+    }
+    public void infoGato(){
+        System.debug('O gato de nome '+nome+' pesa '+peso+'quilos e é da raça: '+raca);
+    }
+    
+}
+
+
+Gato Lust = new Gato();
+Lust.nNome('Lust');
+Lust.nPeso('3,5');
+Lust.nRaca('Preto e cinza');
+
+Lust.miar();
+Lust.andar();
+Lust.ronronar();
+
+Lust.infoGato();
+
+
+
+/*3) Crie uma classe chamada Pizzaria, com o seguinte método:
+   pedir(String pizza), com o parâmetro recebido verifique:
+       Se pizza igual a Calabresa, imprimir:
+           Pizza de Calabresa, valor R$ 45,00
+       Se pizza igual a 4 Queijos, imprimir:
+           Pizza 4 Queijos, valor R$ 50,00
+       Se pizza igual a Maria Bonita, imprimir:
+           Pizza Maria Bonita, R$ 60,00
+       Senão, imprimir
+           Não possuímos essa Pizza.
+*/
+
+
+public class Pizzaria {
+
+    public void pedirPizza(String sabor){
+        IF(sabor == 'calabreza'){
+            System.debug('Pizza de Calabresa, valor R$ 45,00');
+        }Else IF(sabor == '4 queijos'){
+            System.debug('Pizza 4 Queijos, valor R$ 50,00');
+        }Else IF(sabor == 'Maria Bonita'){
+            System.debug('Pizza Maria Bonita, R$ 60,00');
+        }Else {
+            System.debug('Não possuímos essa Pizza.');
+        }
+        
+    }
+}
+
+
+
+
+/*   
+4) Conversor de medidas 
+Faça uma calculadora que converta 10 medidas
+*/
+
+
+public class Conversao {
+
+    public void minHora (Integer min){
+        Integer hora = min/60;
+
+        System.debug(min+' arredondado em horas da '+hora);
+    }
+    public void metKilo(Decimal Metros){
+        Decimal km = Metros /1000;
+        System.debug(Metros +' da em kilometros '+km);    
+    }
+    public void cmMet(Decimal cent){
+        Decimal metros = cent/100;
+        System.debug(cent+' em metros são '+metros);
+    }         
+    public void gramasKilo(Decimal gramas){
+        Decimal kilo= gramas /1000;
+        System.debug(gramas+' gramas equivalem  a '+kilo);
+
+    }
+    public void milhasKm(decimal Milhas){
+        Decimal km = Milhas * 1.609;
+        System.debug(Milhas+' milhas por hora e equivalente a '+km+' por hora');
+    }
+    public void colherCha(Integer cha){
+        Decimal gramas = cha*4;
+        System.debug(cha +' colheres de chá de medida da '+gramas+'gramas');
+    }
+    public void colherSobremesa(Integer Sobremesa){
+        Decimal gramas = Sobremesa*8;
+        System.debug(Sobremesa +' colheres de Sobremesa de medida da '+gramas+'gramas');
+    }
+    public void colherSopa(Integer Sopa){
+        Decimal gramas = Sopa*12;
+        System.debug(Sopa +' colheres de Sopa de medida da '+gramas+'gramas');
+    }
+    public void copoAmericano(Integer Americano){
+        Decimal gramas = Americano*148;
+        System.debug(Americano +' copo Americano de medida da '+gramas+'gramas');
+    }
+    public void xicaraCha(Integer xicara){
+        Decimal gramas = xicara*180;
+        System.debug(xicara +' xicara de cha  de medida da '+gramas+'gramas');
+    }
+    
+}
+
+
+
+/*
+5) Calculo de Areas Geométricas
+Calcule 5 Areas geométricas diferentes
+*/
+
+
+public class AreaGeometrica {
+
+   	    public void triangulo(Decimal base, Decimal altura){
+        Decimal area = (base* altura)/2;
+        System.debug('A area dessa triangulo é '+area);
+    }
+        public void retangulo (Decimal base, Decimal altura){
+        Decimal area = base* altura;
+        System.debug('A area dessa retangulo é '+area);
+    }
+        public void quadrado (Decimal lado){
+        Decimal area = lado*lado;
+        System.debug('A area dessa quadrado é '+area);
+    }
+        public void losango(Decimal diagonalMenor, Decimal diagonalMaior){
+        Decimal area = (diagonalMenor* diagonalMaior)/2;
+        System.debug('A area dessa losango é '+area);
+    }
+        public void trapezio(Decimal baseMaior,Decimal baseMenor, Decimal altura){
+        Decimal area = ((baseMaior* baseMenor)*altura)/2;
+        System.debug('A area dessa trapezio é '+area);
+    }
+    
+}
+
