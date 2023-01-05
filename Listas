@@ -1,0 +1,362 @@
+Defina uma lista de bandas favoritas
+Remova os 2 últimos valores
+Adicione outros 3 Valores após
+
+List<string> bandas = new List<string>{
+    'CBJr',	'Velhas Virgens', 'Curasbum Oi','SKA-P'	
+};
+bandas.Remove(2);
+bandas.remove(2);
+bandas.add('My chemical Romance');
+bandas.add('The Offspring');
+bandas.add('The Living Tombstone');
+system.debug(bandas);
+
+
+
+Crie uma lista com 8 índices já pré-definidos.
+Coloque um valor aleatório como 3 posição.
+Adicione uma nova posição com um valor aleatório
+Remova o valor da nova posição
+
+
+List<Integer> aleatorio = new List<Integer>(8);
+aleatorio.set(2,1);
+aleatorio.add(2);
+aleatorio.remove(8);
+
+system.debug(aleatorio);
+
+
+
+Crie uma lista com números pares (Utilizando loop)
+
+List<integer> par = new List<Integer>();
+For(integer n = 1; n<=10;n++){
+   
+    If(math.mod(n, 2)==0){
+        par.add(n);
+    }
+}
+system.debug(par);
+
+
+
+
+
+
+
+Crie uma Lista  de valores String com 8 nomes de séries. Mostre em formato de ranking esses valores da lista. 
+
+Ex: 
+As mais assistidas.
+1 - série x
+2 - série y
+.
+.
+.
+8 - série w
+
+List<String> serie = new List<String>{
+		' A Máfia dos Tigres','La Casa de Papel','Sex/Life','The Witcher','Lupin','Bridgerton','Stranger Things','Round 6'
+	};
+
+System.debug('O ranking das serie mais assistidas é: ');        
+system.debug('em 8° '+serie.get(0));
+system.debug('em 7° '+serie.get(1));
+system.debug('em 6° '+serie.get(2));
+system.debug('em 5° '+serie.get(3));
+system.debug('em 4° '+serie.get(4));
+system.debug('em 3° '+serie.get(5));
+system.debug('em 2° '+serie.get(6));
+system.debug('em 1° '+serie.get(7));
+
+
+Crie uma Lista com os seguintes valores (A, B, C, D, E, F). Baseado nas posições dessa lista, imprima as seguintes palavras.
+FACA
+BABA
+FADA
+ACABADA
+
+
+List<String> letra = new List<String>{
+    'A','B','C','D','E','F'
+        };
+
+System.debug(letra[5]+letra[0]+letra[2]+letra[0]);            
+System.debug(letra[1]+letra[0]+letra[1]+letra[0]);  
+System.debug(letra[5]+letra[0]+letra[3]+letra[0]);  
+System.debug(letra[0]+letra[2]+letra[0]+letra[1]+letra[0]+letra[3]+letra[0]);  
+
+
+
+
+Crie um Map com chave e valores String. Com os valores abaixo, respectivamente:
+
+key - valor
+empresa - mamaco corp
+ceo - romero brito
+valor - 8000000
+cnpj - 1233210001-99
+
+
+Map<String,String> algo = new Map<String,String>();
+algo.put('key','valor');
+algo.put('empresa',' mamaco corp');
+algo.put('ceo','romero brito');
+algo.put('valor','8000000');
+algo.put('cnpj','1233210001-99');
+
+System.debug('A empresa '+algo.get('empresa')+' alcançou o valor de mercado de '+algo.get('valor')+' o CEO '+algo.get('ceo')+' declarou ser o primeiro passo para dominar o mundo');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Crie uma três listas de itens pra assistir jogo de estreia do Brasil na Copa:
+Lista de quem você convocaria para a seleção Brasileira (pode ser qualquer um, não precisa nem ser jogador);
+Lista com os itens para fazer um churrasco;
+Lista com os itens de bebidas pro churrasco.
+
+List<string> jogadores = new List<string>{
+    'Naruto', 'Alisson',' Sergio Ramos', 'Thiago Silva ', 'Marcelo', 'Mendy', 'Cassemiro', 'Cross', 'Neymar', 'Minato', 'Cristiano Ronaldo'
+};
+List<string> churrasco = new List<string>{
+    'Carne de boi', 'Carne de porco', 'Pão de alho'', 'Linguiça', 'Espetinho', 'Coração', 'Maionese', 'Molho à campanha', 'Farofa', 'Arroz', 'Carvão' 
+};
+List<string> bebida = new List<string>{
+    'Cerveja', 'TNT', 'Cola-Cola', Fanta Uva'', Whisky'', 'Vinho', 'Ousadia', 'Run', Agua'', 'Vodka', 'Suco'
+};    
+system.debug('Lista de jogadores '+jogadores);
+system.debug('Lista de churrasco '+churrasco);
+system.debug('Lista de bebida '+bebida);
+
+churrasco.remove(3);
+bebida.remove(2);
+jogadores.set(1,'Messi');
+jogadores.set(2,'Sasuke');
+jogadores.set(3,'Tsubasa');
+
+system.debug(' Nova lista de jogadores '+jogadores);
+system.debug('O que trouxeram: churrasco '+churrasco);
+system.debug('O que trouxeram: bebida '+bebida);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Faça sua lista pro Papai Noel, você deve pedir 5 presentes.
+Remova o 2º e o 4º presentes.
+Adicione um presente.
+
+
+List<string> presentes = new List<string>{
+    'ps5', 'bicileta', 'computador', 'cerveja','ZIPPO'
+};
+presentes.remove(1);
+presentes.remove(3);
+presentes.add('Whisky');
+System.debug(presentes);
+    
+
+Faça um duas listas: Ingredientes e Medidas, conforme os valores abaixo, nesta ordem:
+Ingredientes: Leite condensado, Manteiga, Chocolate;
+Medidas: Colher, Gramas, Lata.
+Imprima, concatenando itens da lista com strings, a receita abaixo:
+
+Receita de Brigadeiro
+
+Ingredientes:
+02 Colher de Manteiga
+01 Lata de Leite condensado
+250 Gramas de Chocolate
+
+Modo de Preparo:
+Em uma panela, derreta a manteiga e logo após, acrescente o Leite condensado, mexa bem e quando estiver homogêneo acrescente o chocolate, mexendo sempre.
+Quanto atingir o ponto de sua preferência, desligue o fogo. Proto.
+
+Seu resultado deve ficar parecido com este abaixo:
+
+
+
+
+List<String> ing = new List<String>{
+    'Leite condensado', 'Manteiga', 'Chocolate'
+};
+List<String> med = new List<String>{
+    'Colher', 'Gramas', 'Lata'
+};
+
+System.debug('Receita de Brigadeiro');    
+System.debug('Ingredientes:');       
+System.debug('2 '+med.get(0)+'es de '+ing.Get(1));       
+System.debug('1 '+med.get(2)+' de '+ing.Get(0));   
+System.debug('250  '+med.get(1)+' de '+ing.Get(2));   
+ System.debug('Modo de Preparo:');       
+ System.debug('Em uma panela, derreta a '+ing.Get(1)+' e logo após, ');       
+ System.debug('acrescente o '+ing.Get(0)+', mexa bem e quando ');       
+ System.debug(' estiver homogêneo acrescente o '+ing.Get(2)+', mexendo sempre.');       
+ System.debug('Quanto atingir o ponto de sua preferência, desligue o fogo. Proto.');       
+     
+      
+    
+  
+Questão 1
+
+List<string> msc = new List<string>();
+
+msc.add('The Kids Arent Alright');
+msc.add('An irish pub song');
+msc.add('Imprevisto');
+msc.add('Eu to bem');
+msc.add('Hurt');
+
+System.debug(msc.Get(3));
+
+Questão 2
+
+List<Integer> n = new List<Integer>();
+
+For(Integer v= 0; v<30;v++){
+    n.add(v);
+}
+
+system.debug(n);
+
+
+Questão 3
+
+List<Integer> anos = new List<Integer>{
+	1930, 1976, 1996, 1999
+};
+
+anos.set(1,2022);
+System.debug(anos);
+
+
+Questão 4
+
+String ano ='1996';
+
+Integer nAno= Integer.valueOf(ano);
+system.debug(nAno);
+
+
+Questão 5
+
+Map<String,String>pet = new Map<String,String>();
+pet.put('cor','preta e cinza');
+pet.put('habilidade','super fofa');
+pet.put('defeito','cara de marrenta');
+pet.put('raça','preta e cinza');
+pet.put('idade','9 anos');
+
+system.debug(pet);
+
+
+Questão 6
+
+Map<String,String> Friends = new Map<String,String>();
+
+Friends.put('Temproada 1','24');
+Friends.put('Temproada 2','24');
+Friends.put('Temproada 3','25');
+Friends.put('Temproada 4','24');
+Friends.put('Temproada 5','24');
+Friends.put('Temproada 6','25');
+Friends.put('Temproada 7','24');
+Friends.put('Temproada 8','24');
+Friends.put('Temproada 9','24');
+Friends.put('Temproada 10','18');
+
+system.debug(Friends);
+
+
+Questão 7
+
+List são conjuntos de dados, com índices que são atribuídos na hora da criação ou da adição(salvo quando usado a função set) que permite a adição de varios elementos iguais.
+Set são conjuntos tal como as List mas suas diferenças e a falta de índice e sua ordem ser embaralhada se não me engano na ordem de primeiro dados que comecem com numeros depois os que começam com letra maiúscula e por fim as que começam por letra minúscula, além do fato de não aceitar elementos repetidos.
+Map são conjuntos de elementos  que é composto por duas coisas; chaves, que seriam algo como um titulo para um par e o outro e o valor, quando usado o comando system.debug você vera todo os conjuntos das chaves ou usando get você consegue saber o valor de uma chave usando o nome da chave para se encontrado 
+
+Questão 8
+
+List<Integer> cometa = new List<Integer>();
+
+For(Integer anos= 1986; anos<=3000; anos+=76 ){
+  cometa.add(anos);  
+}
+System.debug(cometa);
+
+
+
+
+
+
+
+
+Questão 9
+
+Map<String,Integer> semiFinal1 = new Map<String,Integer>{
+    'Brasil' => 0, 'França' => 1
+};
+
+Map<String,Integer> semiFinal2 = new Map<String,Integer>{
+    'Portugual' => 0, 'Argentina' => 1
+};
+    
+If(semiFinal1.get('Brasil')>semiFinal1.get('França')){    
+    If(semiFinal2.get('Portugual')>semiFinal2.get('Argentina')){  
+        System.debug('O jogo da final vai ser entre Brasil e Portugual');
+        
+    }  Else if(semiFinal2.get('Argentina')>semiFinal2.get('Portugual')){
+		System.debug('O jogo da final vai ser entre Brasil e Argentina');
+    }  
+}Else if (semiFinal1.get('França')>semiFinal1.get('Brasil')){    
+    If(semiFinal2.get('Portugual')>semiFinal2.get('Argentina')){  
+        System.debug('O jogo da final vai ser entre França e Portugual');
+        
+    }  Else if(semiFinal2.get('Argentina')>semiFinal2.get('Portugual')){
+		System.debug('O jogo da final vai ser entre França e Argentina');
+    }  
+}
+
+
+
+
+
+
