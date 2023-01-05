@@ -1,0 +1,199 @@
+/*   
+01. O Colégio João Ninguém precisa calcular a média de seus alunos. São 4 provas no ano, e no fim precisamos da informação de se o aluno foi aprovado ou não. Sendo assim , faça:
+Declare a variável nome do aluno;
+Declare 4 variáveis de nota (uma pra cada prova);
+Imprima o nome do aluno, e qual a média dele naquele ano;
+Se a média for maior ou igual a 7, imprima APROVADO, senão, imprima REPROVADO.
+*/
+
+string aluno = 'Jonathan';
+
+decimal notal = 8;
+decimal nota2 = 7;
+decimal nota3 = 3;
+ decimal nota4 = 6;
+decimal media = (notal + nota2 + nota3 + nota4)/4;
+
+if (media >= 7){
+
+system.debug('0 ' + aluno +' tirou uma media '+ media +' e foi aprovado!!');
+}else{
+system.debug('0 '+ aluno + ' tirou uma media '+ media +' e foi reprovado!!');
+} 
+
+
+
+
+/*   
+
+02.  Sr. Josevaldo quer saber a idade de seus clientes, crie um algoritmo que leia o ano de nascimento e informe a idade (ano atual - ano de nascimento).
+
+*/
+integer nascimento = 1928;
+integer idade = 2022 - nascimento;
+string Cliente = 'Donaria';
+system.debug('A idade do(a) '+ cliente +' é  '+ idade );
+
+
+
+
+/*   
+
+03. Defina um número e depois imprima ele, seu antecessor e seu sucessor.
+
+*/
+
+integer n = 0; 
+
+system.debug(n--);
+system.debug(n++);
+system.debug(++n);
+
+
+
+/*   
+
+04. Faça um algoritmo que defina um valor e depois determine se este valor é positivo ou negativo. (considere zero como positivo)
+
+*/
+
+integer n = -1 ;
+
+if (n >=0){
+system.debug('O número '+ n +' é positivo');
+      }else {
+system.debug('o número '+ n + ' é negativo');
+}
+
+
+
+
+
+
+/*   
+05. Defina dois valores e imprima uma das três mensagens a seguir: 
+‘Números iguais’, caso os números sejam iguais;     ==
+‘Primeiro é maior’, caso o primeiro seja maior que o segundo;
+‘Segundo maior’, caso o segundo seja maior que o primeiro. 
+
+
+*/
+
+integer n1 = 8;
+integer n2 = 7;
+
+if(n1 == n2){ 
+     system.debug('Números iguais.');
+}else if(n1 > n2) {
+     system.debug('Primeiro é maior '+ n1+ ' > '+n2);
+}else if (n2> n1) {
+system.debug('Segundo maior '+ n2+' > '+n1);
+}
+
+
+
+
+/*   
+06. Faça um algoritmo para ler: número da conta do cliente, saldo, débito e crédito. Após, calcular e escrever o saldo atual (saldo atual = saldo - débito + crédito). Também testar se saldo atual for maior ou igual a zero escrever a mensagem 'Saldo Positivo', senão escrever a mensagem 'Saldo Negativo'.
+
+*/
+integer numeroDaConta=  123987;
+decimal saldo = 1000;
+decimal debito = 350;
+decimal credito = 300;
+decimal saldoAtual = saldo - debito - credito;
+if(saldoAtual >= 0){
+     system.debug('Saldo possitivo');
+} else {
+     system.debug('Saldo negativo');
+}
+
+
+
+
+
+/*   
+07. Não custa nada sonhar, as seleções finalistas da Copa do Mundo do Qatar são Brasil e França, quem será o campeão? Declare as variáveis finalista1, finalista2 e campeao.
+Se o campeão for Brasil, imprima: HEXACAMPEÃO!!!
+Se o campeão for França, imprima: TRICAMPEÃO!!!
+
+*/
+string finalista1 = 'Brasil';
+string finalista2 = 'França';
+string campeao = 'Brasil';
+
+if(campeao == finalista1){
+    system.debug('HEXACAMÉÃO');
+} else {
+    system.debug('TRICAMPEÃO');
+}
+
+
+
+
+/*   
+
+08. Declare dois valores e imprima quem é o maior, quem é o menor e qual a média.
+(Exemplo: 'x é o maior!' | 'x é o menor!' |  'x é a média!')
+
+*/
+
+decimal n1 = 2;
+decimal n2 = 4;
+decimal media = (n1+n2)/2;
+
+if(n1>n2){
+    system.debug(n1+' e o maior!! '+n2+' é o menor! '+media+' e a media');
+} else{
+    system.debug(n2+' e o maior!! '+n1+' é o menor! '+media+' e a media');    
+}
+
+
+
+/*   
+09. Sr. Josevaldo tem uma mini mercearia no Bairro do Limoeiro, em comemoração ao aniversário da lojinha, ele quer fazer uma promoção, em que todos os itens fiquem com 15% de desconto. A cliente Magali quer comprar 5Kg de melancia, o valor da fruta era de R$ 3,99/Kg antes da promoção. Como você ajudaria o Sr. Josevaldo a fazer esse cálculo em Apex? Ele precisa que seja mostrado na notinha (seu System.debug) o nome do cliente, o item comprado, a quantidade, o preço anterior, o preço atual, o valor total da compra sem a promoção e o valor total da compra com a promoção. Além disso, no fim da notinha deve haver a informação de quanto (R$) foi a economia total do cliente.
+*/
+
+string cliente = 'Magali' ;
+string item = 'Melancia' ;
+decimal quantidade = 5;
+decimal valor_antigo = 3.99;
+decimal valor_atual = valor_antigo -(valor_antigo *0.15);
+decimal valor_total = valor_antigo * quantidade;
+decimal valor_c_desconto= valor_atual * quantidade;
+decimal economia = valor_total - valor_c_desconto ;
+
+system.debug('O(a) nosso(a) cliente '+cliente+' comprou '+quantidade+' de '+item+' que o preço antigo era R$'+valor_antigo+' e o preço atual é R$'+valor_atual+'. O valor total da compra foi R$'+valor_c_desconto+'foi economizado R$'+economia+' em relação ao preço antigo que ia ser R$'+valor_total);
+
+
+
+/*   
+10. Sr. Josevaldo decidiu que na segunda semana da promoção de aniversário a promoção seria diferente:
+Faça um algoritmo para definir: a descrição do produto(nome), a quantidade adquirida e o preço unitário. Calcular e escrever o total(total = quantidade adquirida * preço unitário),  desconto e o total a pagar(total a pagar = total - desconto), sabendo-se que:
+Se quantidade <= 5 o desconto será de 2%
+Se quantidade > 5 e quantidade <=10 o desconto será de 3%
+Se quantidade > 10 o desconto será de 5%
+*/
+
+string item =  'Chocolate';
+decimal quantidade = 10 ;
+decimal preco = 3.90 ;
+decimal total = preco * quantidade; 
+decimal desconto ; 
+
+if(quantidade <=5){
+    desconto = 0.2;
+}else if(quantidade >5 || quantidade <= 10){
+    desconto = 0.3;
+}else{
+    desconto = 0.5;
+}
+
+decimal total_desconto= total-(total*desconto); 
+decimal economia = total - total_desconto;
+system.debug('O total a se pagar era R$'+total+' mas na promoção você paga R$'+total_desconto+' economizando R$'+economia+' na sua compra');
+
+
+
+
+
