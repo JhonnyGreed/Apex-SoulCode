@@ -1,0 +1,88 @@
+1
+
+String letra = 'd';
+
+If(letra == 'a' ||letra == 'A' ||letra == 'e' ||letra == 'E' ||letra == 'i' ||letra == 'I' ||letra == 'o' ||letra == 'O' ||letra == 'U' ||letra == 'U'){
+    System.debug('A letra e uma vogal');
+}Else {
+    System.debug('A letra e uma consolante');
+}
+
+2
+
+
+String turno = 'd';
+
+If(turno == 'm' || turno == 'M' ){
+    System.debug('Bom dia!!');
+}Else if(turno == 'v' || turno == 'V' ) {
+    System.debug('Boa Tarde!!');
+}Else if(turno == 'n' || turno == 'N' ) {
+    System.debug('Boa Noite!!');
+}Else  {
+    System.debug('Valor invalido');
+}
+
+
+
+3
+
+Decimal l1 = 80 ;
+Decimal l2 = 80;
+Decimal l3 = 20;
+
+If(l1<l2+l3 ||l2<l1+l3 ||l3<l2+l1 ){
+    If(l1 ==l2 && l2 ==l3){
+        System.debug('Triângulo Equilátero');
+    }Else If(l1==l2 || l2 == l3 || l3 == l1){
+         System.debug('Triângulo Isósceles');
+    }Else{
+        System.debug('Triângulo Escaleno');
+    }
+}Else{
+     System.debug('Não e possivel formar um triangulo');
+}
+
+
+
+4
+
+List<Integer> ns = new List<Integer>();
+For(Integer n = 1000; n <= 2000; n++){
+    If(math.mod(n,7)==2){
+        System.debug(n);
+        ns.add(n);
+    }
+}
+System.debug(ns);
+
+
+5
+
+Herança são atributos e métodos que classes filhos herdam de suas classes pai, como foi usado em aula o exemplo de goku que seria uma classe pai e passaria seu método se transformar em super sayajin para seu filho Gohan
+Mantendo o exemplo acima para explicar  o polimorfismo, ele seria uma mudança de uma atributo ou método que a classe pai tem, como por exemplo a raça(um atributo) da classe de gohan virou meio sayajin mudando o que era a da classe pai que era sayajin puro.
+
+
+6
+
+
+public class Computador {
+
+    public void ligar(){
+        System.debug('Seu PC está ligado');
+    }
+    public void hibernar(){
+        System.debug('Seu PC está hibernando');
+    }
+    public void desligar(){
+        System.debug('Seu PC está desligado');
+    }
+}
+
+Computador test = new Computador();
+
+test.ligar();
+test.hibernar();
+test.desligar();
+
+
