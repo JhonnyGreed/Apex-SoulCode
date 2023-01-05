@@ -1,0 +1,192 @@
+1. Escreva um algoritmo para receber uma temperatura em graus Fahrenheit, calcular e escrever o valor correspondente em graus Celsius (baseado na fórmula abaixo): 
+
+decimal temperaturaF = 212;
+decimal temperaturaC = ((temperaturaF - 32)/9)*5;
+system.debug(temperaturaC);
+
+
+2. As maçãs custam R$ 1,30 cada se forem compradas menos de uma dúzia, e R$ 1,00 se forem compradas pelo menos 12. Escreva um programa que receba o número de maçãs compradas, calcule e escreva o custo total da compra. 
+
+decimal precoMaca  ;
+integer quantidade = 10 ;
+
+if(quantidade <12){
+    precoMaca = 1.30;
+        }else {
+            precoMaca = 1;
+        }
+decimal valor = precoMaca * quantidade; 
+system.debug('O valor da compra foi R$'+valor);
+
+
+3. Baseado no pseudocódigo abaixo crie o algoritmo em Apex. 
+
+string nome = 'Jonathan'  ;
+string sexo =   'M' ;
+decimal altura = 1.74 ;
+decimal peso_ideal ;
+
+if(sexo == 'M'){
+    peso_ideal = (72.7 *altura)-58;
+        } else if (sexo == 'F'){
+    peso_ideal = (62.1 *altura)-44.7;        
+        }
+system.debug('O peso idal para o(a) '+nome+' é '+peso_ideal);
+
+
+
+
+4. Receba o nome de 2 times e o número de gols marcados na partida (para cada time). Escrever o nome do vencedor. Caso não haja vencedor deverá ser impressa a palavra EMPATE. 
+
+
+string timeDaCasa = 'Botafogo'  ;
+string timeVisitante =  'Flamengo' ;
+integer golCasa = 4  ;
+integer golVisi =  1 ;
+
+If(golCasa > golVisi){
+    system.debug(timeDaCasa+' venceu o jogo por '+golCasa+' a '+golVisi );
+}else if(golVisi > golCasa){
+    system.debug(timeDaCasa+' venceu o jogo por '+golVisi+' a '+golCasa );
+} else{
+    system.debug('O jogo foi um empate de '++golVisi+' a '+golCasa);
+}
+    
+    
+    
+    5. Um posto está vendendo combustíveis com a seguinte tabela de descontos: 
+    Escreva um algoritmo que receba o número de litros vendidos e o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 3,30 e o preço do litro do álcool é R$ 2,90.
+
+string combustivel = 'a' ;
+decimal litros =  21 ;
+decimal preco ;
+decimal desconto ;
+
+If(litros <=20){
+    if(combustivel =='a'){
+    desconto = 0.03;  
+    preco =  2.90 ;    
+    }else if(combustivel == 'g'){
+    desconto = 0.04; 
+    preco =  3.30 ;    
+    }     
+}else if (litros >20){
+  if(combustivel =='a'){
+    preco =  2.90 ;    	
+    desconto = 0.05;     
+    }else if(combustivel == 'g'){
+    desconto = 0.06;   
+    preco =  3.30 ;    
+    }     
+}
+decimal valor = litros * preco;
+decimal total = valor - (valor * desconto);
+system.debug('a sua compra foi '+litros+' litros de combustivel '+' por '+valor+' o total a pagar com desconto é R$'+total);
+
+
+6. Faça um algoritmo para ler as 3 notas obtidas por um aluno nas 3 verificações e a média dos exercícios que fazem parte da avaliação. Calcular a média de aproveitamento, usando a fórmula abaixo e escrever o conceito do aluno de acordo com a tabela de conceitos mais abaixo: 
+
+
+decimal n1 = 6 ;
+decimal n2 =  9 ;
+decimal n3 =  8 ;
+decimal exer = 10 ;
+decimal media = (n1 + (n2*2)+ (n3*3)+ exer)/7;
+string c ;    
+    If(media <6){
+        c= 'D';
+    }else if(media >= 6 && media <7.5){
+        c = 'C';
+    }else if(media >= 7.5 && media <9){
+        c = 'B';
+    }else if(media >9){
+        c = 'A';
+    }     
+system.debug('A sua media foi '+media+' e você e um aluno(a) de conceito '+c);
+     
+
+
+
+7. Com base no pseudocódigo, crie o mesmo em Apex: 
+
+decimal a = 60 ;
+decimal b =  60;
+decimal c =  60;
+
+If(a < b+c && b <a+c && c <a+b ){
+    if( a == b && b==c ){
+    system.debug('Triangulo equilatero');
+}Else If(a == b || b == c || a == c){
+    system.debug('Triangulo isósceles');
+}Else {
+    system.debug('Triangulo escaleno');
+}
+}Else{
+    system.debug('Não e possivel formar um triângulo');
+}
+
+
+8. Escreva um algoritmo para imprimir os 20 primeiros números inteiros maiores que 100. 
+
+For(Integer n =101; n <=120; n++  ){
+    system.debug(n);
+
+9. Escreva um algoritmo que calcule e imprima a tabuada do 8. De 1 a 10.
+
+Integer v = 1;
+
+While(v <= 10){
+    system.debug('8 vezes '+v+' e '+(v*8));
+    v++;
+}
+
+
+
+10. Escreva um algoritmo que leia um valor inteiro início e outro fim. Exiba através de loop, os valores entre início e fim.
+
+Integer vInicial = 1;
+Integer vFinal = 12;
+
+While(vInicial<=vfinal){
+    vInicial++;
+}     system.debug(vInicial);
+    system.debug(vFinal );
+
+
+11. modifique o algoritmo acima para receber um terceiro valor (dequanto) na declaração, onde ele vai ter que exibir os valores entre início e fim, de (dequanto) em (dequanto).
+
+
+Integer vInicial = 1;
+Integer vFinal = 12;
+Integer deQuanto = 0 ;
+While(vInicial<vfinal){
+    vInicial++;
+    deQuanto++;  
+}  system.debug(vInicial);
+    system.debug(vFinal );
+    system.debug(deQuanto);
+
+
+12. Uma empresa quer verificar se um empregado está qualificado para a aposentadoria ou não. Para estar em condições, um dos seguintes requisitos deve ser satisfeito: 
+
+- Ter no mínimo 65 anos de idade. 
+- Ter trabalhado no mínimo 30 anos. 
+- Ter no mínimo 60 anos e ter trabalhado no mínimo 25 anos. 
+
+Com base nas informações acima, faça um algoritmo que leia: o número do empregado (código), o ano de seu nascimento e o ano de seu ingresso na empresa. O programa deverá escrever a idade e o tempo de trabalho do empregado e a mensagem 'Requerer aposentadoria' ou 'Não requerer'.
+
+
+Integer numeroFunc = 1;
+Integer nascimento = 1987;
+Integer contrato = 1993 ;
+Integer idade = 2022 -  nascimento  ;
+Integer anosTraba = 2022 - contrato;
+Integer contInss = idade + anosTraba ; 
+
+system.debug('O funcionario de codigo numero '+numeroFunc+' ja tem '+idade+' anos e trabalhou por '+anosTraba);
+
+If(idade >= 65 || anosTraba >=30 || idade >= 60 && anosTraba >=25){
+    system.debug('e requer aposentadoria');
+}else{
+    system.debug('e não requer aposentadoria ');
+}
